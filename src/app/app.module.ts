@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LaunchListComponent } from './components/launch-list/launch-list.component';
 import { RouterModule, Routes } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
 
 var routes : Routes = [
   {
@@ -21,7 +22,8 @@ var routes : Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes), 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
