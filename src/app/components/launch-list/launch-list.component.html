@@ -7,7 +7,7 @@
   <section class = "">
     <div class = "spacex-content">
       <div class = "cards filter-section">
-        <span>Filters</span>
+        <span class ="heading">Filters</span>
         <div class = "filter-year">
           <span class = "filter-heading">Launch Year</span>
           <div class = "filters">
@@ -30,22 +30,27 @@
         </div>
       </div>
       <div class = "content-section">
-        <div class = "cards">
-          <span class = "card-heading">Falcon Sat #1</span>
-          <div class = "card-details">
-            <div>
-              <span>Mission IDs : </span> <span>42424</span>
-            </div>
-            <div>
-              <span>Launch Year</span> <span>sfsdsd</span>
-            </div>
-            <div>
-              <span>Successful Launch : </span> <span>3453453453535</span>
-            </div>
-            <div>
-              <span>Successful Landing : </span> <span>sdfsdfsdfdf</span>
-            </div>
+        <div class = "cards" *ngFor="let item of launchProgram; let index=index;">
+          <div class="program-image">
+            <img src="{{item.links.patch.small}}"/>
           </div>
+          <section class="program-details">
+            <span class = "card-heading">{{item.name}}</span>
+            <div class = "card-details">
+              <div>
+                <span class="detail-heading">Mission IDs : </span> <span class="detail-values">{{item.id}}</span>
+              </div>
+              <div>
+                <span class="detail-heading">Launch Year : </span> <span class="detail-values">{{item.static_fire_date_utc | date : 'yyyy'}}</span>
+              </div>
+              <div>
+                <span class="detail-heading">Successful Launch : </span> <span class="detail-values">{{item.success}}</span>
+              </div>
+              <div>
+                <span class="detail-heading">Successful Landing : </span> <span class="detail-values">{{item.cores[0].landing_attempt}}</span>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
