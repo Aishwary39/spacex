@@ -1,0 +1,27 @@
+.cards{
+    background-color: white;
+    margin: 10px 0;
+    background-color: white;
+    margin: 10px 10px 0 0;
+}
+.filter-heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid;
+}
+.filters .button{
+    border-radius: 22px;
+    background: darkseagreen;
+    color: white;
+    padding: 8px 5px;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    flex: 0 0 35%;
+}
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+}
+

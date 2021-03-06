@@ -1,0 +1,54 @@
+<main role="spacex-items" class="spacex-items">
+  <section>
+    <header>
+      <h1>SpaceX Launch Programs</h1>
+    </header>
+  </section>
+  <section class = "">
+    <div class = "spacex-content">
+      <div class = "cards filter-section">
+        <span>Filters</span>
+        <div class = "filter-year">
+          <span class = "filter-heading">Launch Year</span>
+          <div class = "filters">
+            <div class = "button" *ngFor = "let year of launchYearFilter">{{year}}</div>
+          </div>
+        </div>
+        <div class = "filter-launch">
+          <span class = "filter-heading">Successful Launch</span>
+          <div class = "filters">
+            <div class = "button">True</div>
+            <div class = "button">False</div>
+          </div>
+        </div>
+        <div class = "filter-landing">
+          <span class = "filter-heading">Successful Landing</span>
+          <div class = "filters">
+            <div class = "button">True</div>
+            <div class = "button">False</div>
+          </div>
+        </div>
+      </div>
+      <div class = "content-section">
+        <div class = "cards">
+          <span class = "card-heading">Falcon Sat #1</span>
+          <div class = "card-details">
+            <div>
+              <span>Mission IDs : </span> <span>42424</span>
+            </div>
+            <div>
+              <span>Launch Year</span> <span>sfsdsd</span>
+            </div>
+            <div>
+              <span>Successful Launch : </span> <span>3453453453535</span>
+            </div>
+            <div>
+              <span>Successful Landing : </span> <span>sdfsdfsdfdf</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
