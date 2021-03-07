@@ -11,6 +11,10 @@
     justify-content: center;
     border-bottom: 1px solid;
 }
+
+.active{
+    background : rgb(33, 204, 33) !important;
+}
 .filters .button{
     border-radius: 22px;
     background: darkseagreen;
@@ -20,6 +24,7 @@
     justify-content: center;
     margin: 15px;
     flex: 0 0 35%;
+    cursor: pointer;
 }
 .filters{
     display: flex;
@@ -32,6 +37,7 @@ span.heading{
     display: flex;
     justify-content: center;
     background-color:#8080801c;
+    min-height: 55%;
 }
 .program-image img{
     width: 70%;
@@ -54,6 +60,10 @@ span.heading{
     margin-top: 8px;
 }
 
+.content-cards{
+    border: none;
+}
+
 /* If screen size is more than 600px wide, set the font-size of <div> to 80px */
 @media screen and (min-width: 1024px) {
     .spacex-content{
@@ -62,6 +72,8 @@ span.heading{
     .content-section{
         display: flex;
         flex-wrap: wrap;
+        min-width: 75%;
+        flex: 0 0 22.33% !important;
     }
     .cards{
         flex: 1 0 30%;
@@ -77,6 +89,8 @@ span.heading{
         flex-wrap: wrap;
         max-height: 40rem;
         overflow-y: auto;
+        min-width: 75%;
+        flex: 0 0 22.33% !important;
     }
     .cards{
         flex: 1 0 20%;

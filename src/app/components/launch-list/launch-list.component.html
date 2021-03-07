@@ -10,27 +10,27 @@
         <span class ="heading">Filters</span>
         <div class = "filter-year">
           <span class = "filter-heading">Launch Year</span>
-          <div class = "filters">
-            <div class = "button" *ngFor = "let year of launchYearFilter">{{year}}</div>
+          <div class = "filters years">
+            <div class = "button" *ngFor = "let year of launchYearFilter" (click)="filterResults($event)">{{year}}</div>
           </div>
         </div>
         <div class = "filter-launch">
           <span class = "filter-heading">Successful Launch</span>
-          <div class = "filters">
-            <div class = "button">True</div>
-            <div class = "button">False</div>
+          <div class = "filters launch">
+            <div class = "button" (click)="filterResults($event)">True</div>
+            <div class = "button" (click)="filterResults($event)">False</div>
           </div>
         </div>
         <div class = "filter-landing">
           <span class = "filter-heading">Successful Landing</span>
-          <div class = "filters">
-            <div class = "button">True</div>
-            <div class = "button">False</div>
+          <div class = "filters landing">
+            <div class = "button" (click)="filterResults($event)">True</div>
+            <div class = "button" (click)="filterResults($event)">False</div>
           </div>
         </div>
       </div>
       <div class = "content-section">
-        <div class = "cards" *ngFor="let item of launchProgram; let index=index;">
+        <div class = "content-cards cards" *ngFor="let item of launchProgram; let index=index;">
           <div class="program-image">
             <img src="{{item.links.patch.small}}"/>
           </div>
