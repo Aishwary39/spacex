@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Deployed in heroku using continuous deployment strategy
+
+1. Here, in heroku the application gets deployed once the build has been triggered.
+2. Use the url :  https://aish-spacex.herokuapp.com/space-programs to access the application.
