@@ -36,11 +36,10 @@ export class LaunchListComponent implements OnInit {
   }
 
   filterData(res){
-    debugger;
     const filterKeys = Object.keys(this.filters);
 
 
-    
+
 
 
     // this.launchProgram = res.filter(item=>{
@@ -74,7 +73,6 @@ export class LaunchListComponent implements OnInit {
   }
 
   filterResults(event){
-    debugger;
     let textKey = '';
     if(event && event.target && event.target.parentElement){
       let parentElem = event.target.parentElement;
