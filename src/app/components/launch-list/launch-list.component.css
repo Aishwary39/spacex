@@ -55,6 +55,11 @@ span.heading{
     font-size: 20px;
     font-weight: 700;
     color: blue;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 12rem;
+    display: block;
 }
 .card-details{
     margin-top: 8px;
@@ -62,6 +67,15 @@ span.heading{
 
 .content-cards{
     border: none;
+    display: inline-block;
+    width: 92%;
+}
+
+.no-data{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
 }
 
 /* If screen size is more than 600px wide, set the font-size of <div> to 80px */
@@ -70,13 +84,15 @@ span.heading{
         display: flex;
     }
     .content-section{
-        display: flex;
-        flex-wrap: wrap;
         min-width: 75%;
-        flex: 0 0 22.33% !important;
     }
-    .cards{
-        flex: 1 0 30%;
+    .filter-section{
+        flex: 1 0 32%;
+    }
+
+    .content-cards{
+        width: 29%;
+        display: inline-block;
     }
 }
 
@@ -85,18 +101,19 @@ span.heading{
         display: flex;
     }
     .content-section{
-        display: flex;
-        flex-wrap: wrap;
         max-height: 40rem;
         overflow-y: auto;
         min-width: 75%;
-        flex: 0 0 22.33% !important;
     }
-    .cards{
+    .filter-section{
         flex: 1 0 20%;
     }
     .filters .button{
         padding: 2px 2px;
+    }
+    .content-cards{
+        width: 22%;
+        display: inline-block;
     }
 }
 

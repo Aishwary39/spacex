@@ -10,20 +10,20 @@
         <span class ="heading">Filters</span>
         <div class = "filter-year">
           <span class = "filter-heading">Launch Year</span>
-          <div class = "filters years">
+          <div id = "years" class = "filters years">
             <div class = "button" *ngFor = "let year of launchYearFilter" (click)="filterResults($event)">{{year}}</div>
           </div>
         </div>
         <div class = "filter-launch">
           <span class = "filter-heading">Successful Launch</span>
-          <div class = "filters launch">
+          <div id="successfulLaunch" class = "filters successfulLaunch">
             <div class = "button" (click)="filterResults($event)">True</div>
             <div class = "button" (click)="filterResults($event)">False</div>
           </div>
         </div>
         <div class = "filter-landing">
           <span class = "filter-heading">Successful Landing</span>
-          <div class = "filters landing">
+          <div id="landingAttempt" class = "filters landingAttempt">
             <div class = "button" (click)="filterResults($event)">True</div>
             <div class = "button" (click)="filterResults($event)">False</div>
           </div>
@@ -44,13 +44,16 @@
                 <span class="detail-heading">Launch Year : </span> <span class="detail-values">{{item.static_fire_date_utc | date : 'yyyy'}}</span>
               </div>
               <div>
-                <span class="detail-heading">Successful Launch : </span> <span class="detail-values">{{item.success}}</span>
+                <span class="detail-heading">Successful Launch : </span> <span class="detail-values">{{item.successfulLaunch}}</span>
               </div>
               <div>
-                <span class="detail-heading">Successful Landing : </span> <span class="detail-values">{{item.cores[0].landing_attempt}}</span>
+                <span class="detail-heading">Successful Landing : </span> <span class="detail-values">{{item.landingAttempt}}</span>
               </div>
             </div>
           </section>
+        </div>
+        <div class = "no-data" *ngIf = "launchProgram.length == 0">
+          <h1>No programs exists</h1>
         </div>
       </div>
     </div>
